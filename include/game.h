@@ -2,17 +2,24 @@
 #define GAME_H
 
 #include <raylib.h>
+#include "textManager.h"
 
 class Game
 {
     private:
-        constexpr static int WINDOW_HEIGHT = 900;
-        constexpr static int WINDOW_WIDTH = 900;
+        enum class GameState { MAIN_MENU, PLAYING };
 
     public:
+        TextManager textManager;
+
         Game();
         ~Game();
-        void Start();
+        void start();
+        void drawUI();
+        void update();
+
+        static const int WINDOW_HEIGHT  = 900;
+        static const int WINDOW_WIDTH   = 900;
 };
 
 #endif
