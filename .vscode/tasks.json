@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Raylib Project",
+            "type": "process",
+            "command": "g++",
+            "args": [
+                "main.cpp", "-o", "game.exe",
+                "-I", "C:/mingw64/include",
+                "-L", "C:/mingw64/lib",
+                "-lraylib", "-lopengl32", "-lgdi32", "-lwinmm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
